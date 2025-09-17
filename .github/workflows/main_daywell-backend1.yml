@@ -32,7 +32,7 @@ jobs:
 
       
       - name: Install dependencies
-        workding-directory: backend
+        working-directory: backend
         run: |
           source venv/bin/activate
           pip install -r requirements.txt
