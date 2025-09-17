@@ -75,5 +75,5 @@ jobs:
         with:
           app-name: 'daywell-backend1'
           slot-name: 'Production'
-          package: ./python-backend
+          package: ./python-backend.zip
 
