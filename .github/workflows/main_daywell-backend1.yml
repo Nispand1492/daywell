@@ -38,16 +38,16 @@ jobs:
           pip install -r requirements.txt
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-
+      - name: Zip backend for deployment
+        working-directory: backend
+        run: |
+          zip -r ../python-backend.zip . -x "venv/*"
 
       - name: Upload backend artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: python-backend
-          path: |
-            backend/**/*
-            !backend/venv/
-
+          path: python-backend.zip
 
   deploy:
     runs-on: ubuntu-latest
