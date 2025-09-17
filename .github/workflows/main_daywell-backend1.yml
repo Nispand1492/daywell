@@ -45,7 +45,7 @@ jobs:
         with:
           name: python-backend
           path: |
-            backend/
+            backend/**/*
             !backend/venv/
 
 
